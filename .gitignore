@@ -1,0 +1,11 @@
+# Ignore swap files created by editors
+*.swp
+
+# Ignore data and graphs folders
+data/
+data.zip
+graphs/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+

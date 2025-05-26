@@ -1,0 +1,20 @@
+name: py39
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - jupyterlab
+  - loguru
+  - matplotlib
+  - numpy
+  - pandas==2.2.1
+  - plotly
+  - requests
+  - scikit-learn
+  - scipy
+  - seaborn
+  - ipywidgets
+  - jupyter
+  - rapidsai::cuml
+  - textblob
+prefix: /home/barry/miniconda3/envs/py39
