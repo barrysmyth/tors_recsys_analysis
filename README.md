@@ -34,7 +34,7 @@ This are the main jupyter notebooks (named in sequence) needed to rerun the anal
 Notice that the notebooks are numerically labeled to indicate the esxecution order. In addition, any files produced by a notebook (e.g. dataset, graph etc) are labelled with the notebooks numerical code.
 
 ### data/
-The data directory contains various different folders for different types of data used in this study. Most of these folders are empty but will be populated by the code provided; certain key files are provided, where feasible, to aid reproducibility, as discussed below. Due to the size of this folder it is not possible to host it directly on GitHub. Instead a zip file of this folder is available on Zenodo. Here is a brief summary of the folders within data/ and their uses:
+The data directory contains various different folders for different types of data used in this study. Most of these folders are empty but will be populated by the code provided; certain key files are provided, where feasible, to aid reproducibility, as discussed below. Due to the size of this folder it is not possible to host it directly on GitHub. Instead a zip file of this folder is available on [Zenodo](https://zenodo.org/records/15517731) (DOI: 10.5281/zenodo.15517731). Here is a brief summary of the folders within this folder/dataset and their uses:
 
 * `data/raw` - as data collection proceeds this directory will be used to hold the raw data collected from SS. Note that it includes seed dataset _1000_recsys_paper_ids_52550.feather_ which is the orihginal ids of a seed set of RS related papers collected using _notebooks/1000_build_recsys_paper_ids_dataset.ipynb_.
 * `data/orig` - this contains a set of data files containing the actual paper ids used in the original study.
