@@ -1,14 +1,12 @@
 # People Who Liked This Also Liked ...A Publication Analysis of Three Decades of Recommender Systems Research
 
-Barry Smyth, Insight Research Ireland Centre for Data Analytics, University College Dublin, Ireland
+[Barry Smyth](https://people.ucd.ie/barry.smyth), [Insight Research Ireland Centre for Data Analytics](https://www.insight-centre.org), [University College Dublin](https://www.ucd.ie), Ireland
 
 May 2025
 
-barry.smyth@ucd.ie
-
 ## Introduction
 
-This repository contains the code and data needed to reproduce a publication analysis of recommender systems (RS) published in ACM Transactions on Recommender Systems. The analysis uses a large collection of papers (>2M) includeing >50k papers identified as core RS papers. These papers were collected using the Semantic Scholar (SS) API. The terms of use of this API do not permit the republishing of raw SS data; for further information on SS see https://www.semanticscholar.org/product/api.
+This repository contains the code and data needed to reproduce a publication analysis of recommender systems (RS) published in ACM Transactions on Recommender Systems. The analysis uses a large collection of papers (>2M) includeing >50k papers identified as core RS papers. These papers were collected using the Semantic Scholar (SS) API. The terms of use of this API do not permit the republishing of raw SS data; for further information on [SS](https://www.semanticscholar.org/product/api).
 
 ## License
 
@@ -36,7 +34,7 @@ This are the main jupyter notebooks (named in sequence) needed to rerun the anal
 Notice that the notebooks are numerically labeled to indicate the esxecution order. In addition, any files produced by a notebook (e.g. dataset, graph etc) are labelled with the notebooks numerical code.
 
 ### data/
-The data directory contains various different folders for different types of data used in this study. Most of these folders are empty but will be populated by the code provided. However, certain key files are provided, where feasible, to aid reproducibilitiy, as discussed below. Here is a brief summary of the folders and their uses:
+The data directory contains various different folders for different types of data used in this study. Most of these folders are empty but will be populated by the code provided; certain key files are provided, where feasible, to aid reproducibility, as discussed below. Due to the size of this folder it is not possible to host it directly on GitHub. Instead a zip file of this folder is available on Zenodo. Here is a brief summary of the folders within data/ and their uses:
 
 * `data/raw` - as data collection proceeds this directory will be used to hold the raw data collected from SS. Note that it includes seed dataset _1000_recsys_paper_ids_52550.feather_ which is the orihginal ids of a seed set of RS related papers collected using _notebooks/1000_build_recsys_paper_ids_dataset.ipynb_.
 * `data/orig` - this contains a set of data files containing the actual paper ids used in the original study.
@@ -52,6 +50,6 @@ This directory contains some wrapper code used to interact with the SS API. It u
 ## Reproducing the Original Study
 As mentioned above, reproducing the original study precisely is non-trivial in the sense that re-running the data collection code will likely produce a different dataset because of the SS updates that have taken place since the data was originally collected in late 2024. However, the results should be substantially similar, especially since the analysis focuses on the period prior to 2024.
 
-To aid reproducibility, the datasets `data/raw/2000_recsys_papers_ids_with_extra_columns.feather` and `data/raw/2000_recsys_authors_ids_with_extra_columns.feather` contain the full set of original paper/author ids collected from SS as the basis for the study; these datasets also contain some additional columns constructed during the data collection process in `notebooks/2000_build_recsys_ss_paper_datatset.ipynb`. It should be possible to re-collect the records for these paper/authors ids using the SS API (code is included in `src/` to help with this) and these records can then be joined with the id dataframes in order to recreate the exact dataframes (`2000_recsys_papers.feather` and `2000_recsys_authors.feather`) needed by this study, starting with `2100_refine_recsys_ss_paper_datatset.ipynb`
+To aid reproducibility, the datasets _data/raw/2000_recsys_papers_ids_with_extra_columns.feather_ and _data/raw/2000_recsys_authors_ids_with_extra_columns.feather_ contain the full set of original paper/author ids collected from SS as the basis for the study; these datasets also contain some additional columns constructed during the data collection process in _notebooks/2000_build_recsys_ss_paper_datatset.ipynb_. It should be possible to re-collect the records for these paper/authors ids using the SS API (code is included in _src/_ to help with this) and these records can then be joined with the id dataframes in order to recreate the exact dataframes (_2000_recsys_papers.feather_ and _2000_recsys_authors.feather_) needed by this study, starting with _2100_refine_recsys_ss_paper_datatset.ipynb_.
 
 
